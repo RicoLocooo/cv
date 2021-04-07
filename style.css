@@ -1,0 +1,54 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Oswald", Courier, monospace;
+  background: rgb(240, 221, 221);
+}
+
+.head {
+  padding: 2rem;
+  text-align: center;
+  background-color: lightgrey;
+  font-style: bold700;
+}
+
+.jobtitle::after {
+  content: "🤓";
+}
+
+.head .nav {
+  margin-right: 0.75rem;
+}
+
+.article-heading {
+  font-size: 1.75rem;
+  position: relative;
+  left: -1rem;
+}
+
+.main {
+  padding: 1rem;
+  max-width: 60ch;
+}
+
+.hire-me {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  background: rgb(96, 128, 233);
+  color: rgb(240, 243, 234);
+}
+
+.header {
+  position: relative;
+}
+
+html {
+  font-family: Oswald;
+  font-size: 1rem;
+}
