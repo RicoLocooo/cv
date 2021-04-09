@@ -5,13 +5,14 @@
 }
 body {
   font-family: "Oswald", Courier, monospace;
-  background: rgb(240, 221, 221);
 }
 
 .head {
   padding: 2rem;
   text-align: center;
-  background-color: lightgrey;
+  --main-color: lightgrey;
+  background-image: linear-gradient(grey, var(--main-color));
+
   font-style: bold700;
 }
 
@@ -21,6 +22,14 @@ body {
 
 .head .nav {
   margin-right: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
 }
 
 .article-heading {
@@ -44,11 +53,32 @@ body {
   color: rgb(240, 243, 234);
 }
 
-.header {
-  position: relative;
-}
-
 html {
   font-family: Oswald;
   font-size: 1rem;
+  --main-text-color: black;
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .head .nav {
+    display: inline-block;
+  }
+
+  .experience-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.footer {
+  padding: 0.5rem;
+  --main-color: lightgrey;
+  background-image: linear-gradient(to bottom, grey, var(--main-color));
+  text-align: center;
 }
