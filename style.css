@@ -3,44 +3,73 @@
 *:after {
   box-sizing: border-box;
 }
+
+html {
+  font-family: Oswald;
+  font-size: 16px;
+  --main-text-color: black;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 1.5rem;
+  }
+}
+
 body {
-  font-family: "Oswald", Courier, monospace;
+  margin: 0px;
+  --main-color: #87bdd8;
 }
 
-.head {
-  padding: 2rem;
-  text-align: center;
-  --main-color: lightgrey;
-  background-image: linear-gradient(grey, var(--main-color));
-
-  font-style: bold700;
-}
-
-.jobtitle::after {
-  content: "🤓";
-}
-
-.head .nav {
-  margin-right: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.experience {
-  display: flex;
-  flex-direction: column;
-}
-
-.article-heading {
-  font-size: 1.75rem;
-  position: relative;
-  left: -1rem;
+*::selection {
+  background-color: navajowhite;
 }
 
 .main {
   padding: 1rem;
   max-width: 60ch;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 1rem;
+  --main-color: #cfe0e8;
+  text-align: center;
+  background-image: linear-gradient(235deg, var(--main-color), #87bdd8);
+}
+
+.heading-group {
+  font-size: 2rem;
+}
+
+.experience-heading,
+.experience-subheading {
+  display: inline;
+}
+
+.article-heading {
+  position: relative;
+  _left: -1rem;
+}
+
+.main-heading {
+  margin: 0px;
+  padding: 1rem;
+  font-size: 2em;
+}
+
+.profession {
+  font-size: 0.5em;
+}
+
+.profession:after {
+  content: " 🤓";
 }
 
 .hire-me {
@@ -49,14 +78,73 @@ body {
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.75rem;
-  background: rgb(96, 128, 233);
-  color: rgb(240, 243, 234);
+  background-color: #667292;
+  color: white;
+  transition: transform 0.25a ease-in-out, opacity 0.25s ease-in-out;
 }
 
-html {
-  font-family: Oswald;
-  font-size: 1rem;
-  --main-text-color: black;
+.header:hover .hire-me {
+  transform: scale(1.5);
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 1.5rem;
+  }
+  .hire-me {
+    position: fixed;
+  }
+  .header .nav-link {
+    display: inline;
+  }
+
+  .nav-link + .nav-link {
+    margin-left: 1rem;
+    color: blue;
+  }
+}
+
+@media print {
+  .hire-me {
+    display: none;
+  }
+  .navigation {
+    display: none;
+  }
+}
+
+.nav-link {
+  transition: background-color 0.5s;
+}
+
+.nav-link:hover {
+  background-color: lightgrey;
+}
+
+.nav-link:active {
+  color: darkblue;
+}
+
+.nav-link:focus {
+  background-color: yellow;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.main > * {
+  position: relative;
+  left: -1rem;
+
+  margin: 2rem;
+
+  border-top: 2px solid lightgrey;
+}
+
+.main > *:first-child {
+  border-top: none;
 }
 
 .experience-header {
@@ -65,20 +153,34 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  .head .nav {
-    display: inline-block;
+  .main > * + * {
+    margin-top: 2rem;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-link {
+    margin-left: 1rem;
   }
 
   .experience-header {
     flex-direction: row;
+    align-items: baseline;
     justify-content: space-between;
+  }
+
+  .experience-subheading {
+    margin-left: 1rem;
     align-items: baseline;
   }
 }
 
 .footer {
-  padding: 0.5rem;
-  --main-color: lightgrey;
-  background-image: linear-gradient(to bottom, grey, var(--main-color));
+  margin-top: 2rem;
+  background-image: linear-gradient(235deg, var(--main-color), #87bdd8);
+  padding: 2rem;
   text-align: center;
 }

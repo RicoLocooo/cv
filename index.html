@@ -5,6 +5,11 @@
       rel="stylesheet"
       href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+        rel="stylesheet"
+      />
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta author="Enrico Carruba" content="Enrico Carruba" />
@@ -13,93 +18,96 @@
     <title>CV! of Enrico Carruba</title>
   </head>
   <body>
-    <header class="head">
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
-        rel="stylesheet"
-      />
-
-      <h1>Enrico Carruba</h1>
-      <p class="jobtitle">Web and Software Developer</p>
-      <a class="nav" href="#profile">Profile</a>
-      <a class="nav" href="#experience">Experience</a>
-      <a class="nav" href="#skills">Skills</a>
-      <a class="nav" href="#contact">Contact</a>
-      <aside class="hire-me" href="contact.css">Hire me</aside>
+    <header class=header>
+      <div class="heading-group">
+        <h1 class="main-heading">Enrico Carruba</h1>
+        <p class="profession">Web and Software Developer</p>
+      </div>
+      <nav class="navigation">
+        <a class="nav-link" href="#profile">Profile</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <aside class="hire-me" href="contact.css">Hire me</aside>
     </header>
     <main class="main">
-      <article id="profile">
+      <article class="main-article">
         <h2 class="article-heading">Profile</h2>
         <p>
-          Hi, my name is Enrico. I am a junior web and software developer and i
-          ... bla bllaaaaaaa
+          Hi, my name is Enrico. I am a junior web and software developer. I'd like to welcome you on my digital CV and i wish you a lot of fun reviewing my previous projects. Feel free to contact me or even to hire me :) 
         </p>
       </article>
-      <article id="experience">
+      <article class="main-article" >
         <h2 class="article-heading">Experience</h2>
-        <section>
-          <header class="experience-header">
-            <h3>Sales and Business Developement</h3>
-            <p>2002 - 2015</p>
-          </header>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
-            reprehenderit aperiam aut debitis omnis labore id quis numquam sed
-            velit quibusdam facilis itaque, quaerat maiores necessitatibus.
-            Beatae ipsum eveniet assumenda.
-          </p>
-        </section>
-        <section>
-          <header>
-            <h3>Entrepreneur in Barbershop Businesses</h3>
-            <p>2015 - 2021</p>
-          </header>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-            omnis tempore sed beatae nemo suscipit rem nulla. Dignissimos,
-            laborum eaque? Ipsum nam delectus atque voluptates optio at illo
-            dolor modi.
-          </p>
-        </section>
-        <section>
-          <header>
-            <h3>Web and software developement student</h3>
-            <p>2021 - present</p>
-          </header>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-            cum in, voluptate delectus error aliquid a aperiam dolorem,
-            perspiciatis distinctio architecto reprehenderit. Distinctio quia
-            quam earum modi harum ipsa enim?
-          </p>
-        </section>
+        <div>
+          <section>
+            <header class="experience-header">
+              <h3 class="experience-heading">Sales and Business Developement</h3>
+              <p class="experience-subheading">2002 - 2015</p>
+            </header>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+              reprehenderit aperiam aut debitis omnis labore id quis numquam sed
+              velit quibusdam facilis itaque, quaerat maiores necessitatibus.
+              Beatae ipsum eveniet assumenda.
+            </p>
+          </section>
+
+          <section>
+            <header class="experience-header">
+              <h3 class="experience-heading">Entrepreneur in Barbershop Businesses</h3>
+              <p class="experience-subheading">2015 - 2021</p>
+            </header>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+              omnis tempore sed beatae nemo suscipit rem nulla. Dignissimos,
+              laborum eaque? Ipsum nam delectus atque voluptates optio at illo
+              dolor modi.
+            </p>
+          </section>
+          <section>
+            <header class="experience-header">
+              <h3 class="experience-heading">Web and software developement student</h3>
+              <p class="experience-subheading">2021 - present</p>
+            </header>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
+              cum in, voluptate delectus error aliquid a aperiam dolorem,
+              perspiciatis distinctio architecto reprehenderit. Distinctio quia
+              quam earum modi harum ipsa enim?
+            </p>
+          </section>
+        </div>
       </article>
-      <article id="skills">
+      <article class="main-article">
         <h2 class="article-heading">Skills</h2>
-        <section>
-          <h3>Technical skills</h3>
-          <ul>
-            <li>HTML</li>
-            <li>CSSS</li>
-            <li>Javascript</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Soft skills</h3>
-          <ul>
-            <li>Empathy</li>
-            <li>Motivated</li>
-            <li>Solution oriented thinking</li>
-          </ul>
-        </section>
-        <section>
-          <h3>3 bla</h3>
-        </section>
+        <div>
+          <section>
+            <h3>Technical skills</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSSS</li>
+              <li>Javascript</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Soft skills</h3>
+            <ul>
+              <li>Empathy</li>
+              <li>Motivated</li>
+              <li>Solution oriented thinking</li>
+            </ul>
+          </section>
+          <section>
+            <h3>3 bla</h3>
+          </section>
+        </div>
       </article>
-      <article id="contact">
+      <article class="main-article">
         <section>
           <h3 class="article-heading">Contact</h3>
+          <div>
           <ul>
             <li>Phone: 12323455</li>
             <li>Adress: erfgfgsdfg</li>
@@ -107,6 +115,7 @@
           </ul>
           <a href="contact.html">click here</a>
         </section>
+      </div>
       </article>
     </main>
     <footer class="footer">
