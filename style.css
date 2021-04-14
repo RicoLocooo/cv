@@ -33,7 +33,7 @@ body {
 
 .main {
   padding: 1rem;
-  max-width: 60ch;
+  max-width: 70ch;
   margin: 0 auto;
 }
 
@@ -55,7 +55,6 @@ body {
 
 .article-heading {
   position: relative;
-  _left: -1rem;
 }
 
 .main-heading {
@@ -80,7 +79,8 @@ body {
   border-radius: 0.75rem;
   background-color: #667292;
   color: white;
-  transition: transform 0.25a ease-in-out, opacity 0.25s ease-in-out;
+  transform-origin: top right;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
 
 .header:hover .hire-me {
@@ -154,7 +154,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .main > * + * {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   .navigation {
@@ -167,6 +167,7 @@ body {
   }
 
   .experience-header {
+    display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
@@ -175,6 +176,16 @@ body {
   .experience-subheading {
     margin-left: 1rem;
     align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .main-article-content {
+    margin-top: 4rem;
   }
 }
 
